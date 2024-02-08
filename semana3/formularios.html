@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./formularios.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Formularios</h1>
+    </header>
+    <main>
+      <form class="formulario">
+        <h2>Formulario de matrícula</h2>
+
+        <div class="formulario-contenedor">
+          <div class="formulario-fila">
+            <div class="formulario-input">
+              <label for="nombre">Nombre</label>
+              <input
+                name="nombre"
+                id="nombre"
+                type="text"
+                placeholder="John"
+                required
+              />
+            </div>
+
+            <div class="formulario-input">
+              <label for="apellido">Apellido</label>
+              <input
+                name="apellido"
+                id="apellido"
+                type="text"
+                placeholder="Doe"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="formulario-fila">
+            <div class="formulario-input">
+              <label for="correo-electronico">Correo electrónico</label>
+              <input
+                name="correo-electronico"
+                id="correo-electronico"
+                type="email"
+                placeholder="correo@ejemplo.com"
+                required
+              />
+            </div>
+
+            <div class="formulario-input">
+              <label for="password">Contraseña</label>
+              <input
+                name="password"
+                id="password"
+                type="password"
+                placeholder="********"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="formulario-fila">
+            <div class="formulario-input">
+              <label for="fecha-nacimiento">Fecha de nacimiento</label>
+              <input
+                name="fecha-nacimiento"
+                id="fecha-nacimiento"
+                type="date"
+                required
+              />
+            </div>
+
+            <div class="formulario-input">
+              <label for="foto-cedula">Foto cédula</label>
+              <input name="foto-cedula" id="foto-cedula" type="file" required />
+            </div>
+          </div>
+
+          <div class="formulario-fila">
+            <div class="formulario-input">
+              <label for="genero">Género</label>
+              <select name="genero" id="genero" required>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="formulario-input">
+              <label for="pais">País</label>
+              <radio-group name="pais" id="pais" required>
+                <input type="radio" name="pais" value="costa-rica" required />
+                <label for="costa-rica">Costa Rica</label>
+                <input type="radio" name="pais" value="nicaragua" required />
+                <label for="nicaragua">Nicaragua</label>
+                <input type="radio" name="pais" value="panama" required />
+                <label for="panama">Panamá</label>
+              </radio-group>
+            </div>
+          </div>
+
+          <div class="formulario-fila">
+            <div class="formulario-checkbox">
+              <input
+                name="terminos-condiciones"
+                id="terminos-condiciones"
+                type="checkbox"
+                required
+              />
+              <label for="terminos-condiciones"
+                >Acepto términos y condiciones</label
+              >
+            </div>
+
+            <div class="formulario-input">
+              <label for="color">Color favorito</label>
+              <input type="color" name="color" id="color" required />
+            </div>
+          </div>
+
+          <button>Enviar formulario</button>
+        </div>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+.formulario {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario-contenedor {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formulario-input {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.formulario-checkbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.formulario-fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .formulario-input {
+    width: 100%;
+  }
+
+  .formulario-fila {
+    flex-direction: column;
+  }
+}

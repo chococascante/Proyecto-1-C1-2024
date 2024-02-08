@@ -1,3 +1,5 @@
+/* BEM -> BLOCK ELEMENT MODIFIER */
+
 /* Código de caja */
 .producto {
   display: flex;
@@ -20,12 +22,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem; /*16px*/
 }
 
 .producto-titulo {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /*24px*/
   font-weight: bold;
+}
+
+.producto-titulo--rojo {
+  color: red;
 }
 
 .producto-like {
@@ -47,7 +53,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
 }
 
 /* .producto img {
