@@ -1,0 +1,57 @@
+/* Código de caja */
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 600px;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+.producto-imagen {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.producto-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.producto-titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.producto-like {
+  height: 70px;
+}
+
+.producto-decripcion {
+  font-size: 1rem;
+  color: black;
+}
+
+.producto-precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.fila {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* .producto img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+} */
