@@ -63,6 +63,7 @@ function onSubmitFormulario(evento) {
   }
 
   // Yey!
+  window.location.href = "https://www.google.com";
   alert("Inicio de sesión exitoso");
 }
 

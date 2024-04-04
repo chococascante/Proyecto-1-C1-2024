@@ -3,21 +3,25 @@ const listaEstudiantes = [
     nombre: "Luis",
     apellido: "Cascante",
     nota: 0,
+    rol: "estudiante",
   },
   {
     nombre: "Esteban",
     apellido: "García",
     nota: 10,
+    rol: "profesor",
   },
   {
     nombre: "Jill",
     apellido: "Hernandez",
     nota: 8,
+    rol: "directora",
   },
   {
     nombre: "Ana",
     apellido: "Araya",
     nota: 100,
+    rol: "administrador@",
   },
 ];
 
