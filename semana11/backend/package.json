@@ -1,12 +1,12 @@
 {
-  "name": "ejemplo-node",
+  "name": "backend",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
-  "author": "Luis Cascante",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
