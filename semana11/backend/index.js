@@ -9,7 +9,6 @@ const sendEmail = require("./lib/sendEmail");
 const app = express();
 
 app.use(cors());
-
 // Permitir que Express entienda el cuerpo de las solicitudes
 app.use(express.json());
 
@@ -76,10 +75,12 @@ app.post("/usuarios", async function (req, res) {
     !req.body.nombre ||
     !req.body.apellido ||
     !req.body.cedula ||
-    !req.body.email
+    !req.body.email ||
+    !req.body.fotoPerfil
   ) {
     console.error("No se envió el cuerpo de la solicitud");
     res.status(400).send("Falta el cuerpo de la solicitud");
+    return;
   }
 
   const nuevaPassword = Math.random().toString(36).slice(-8);
@@ -91,6 +92,7 @@ app.post("/usuarios", async function (req, res) {
       apellido: req.body.apellido,
       cedula: req.body.cedula,
       email: req.body.email,
+      fotoPerfil: req.body.fotoPerfil,
       password: nuevaPassword,
     });
 
@@ -98,14 +100,14 @@ app.post("/usuarios", async function (req, res) {
     await nuevoUsuario.save();
 
     // Enviar correo de bienvenida
-    await sendEmail({
-      subject: "Bienvenido a la plataforma",
-      correoUsuario: req.body.email,
-      html: `<div>
-        <h1>Bienvenido a la plataforma</h1>
-        <p>Su contraseña es: ${nuevoUsuario.password}</p>
-      </div>`,
-    });
+    // await sendEmail({
+    //   subject: "Bienvenido a la plataforma",
+    //   correoUsuario: req.body.email,
+    //   html: `<div>
+    //     <h1>Bienvenido a la plataforma</h1>
+    //     <p>Su contraseña es: ${nuevoUsuario.password}</p>
+    //   </div>`,
+    // });
 
     // Responder con el ID del usuario creado
     res.status(201).send(nuevoUsuario.id);
@@ -122,6 +124,7 @@ app.patch("/usuarios", async function (req, res) {
   if (!req.body) {
     console.error("No se envió el cuerpo de la solicitud");
     res.status(400).send("Falta el cuerpo de la solicitud");
+    return;
   }
 
   try {
